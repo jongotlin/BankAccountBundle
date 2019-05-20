@@ -10,8 +10,11 @@
   ],
   "autoload": {
     "psr-4": {
-      "JGI\\BankAccountBundle\\": "src"
+      "JGI\\BankAccountBundle\\": "src/"
     }
+  },
+  "autoload-dev": {
+    "psr-4": { "JGI\\BankAccountBundle\\Tests\\": "tests/" }
   },
   "require": {
     "php": "^7.0",
