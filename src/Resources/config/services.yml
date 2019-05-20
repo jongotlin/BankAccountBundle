@@ -1,0 +1,11 @@
+services:
+  byrokrat\banking\AccountFactory:
+    class: byrokrat\banking\AccountFactory
+
+  JGI\BankAccountBundle\Validator\Constraints\BankAccountValidator:
+    class: JGI\BankAccountBundle\Validator\Constraints\BankAccountValidator
+    arguments:
+      - '@byrokrat\banking\AccountFactory'
+    tags:
+      - { name: validator.constraint_validator }
+
