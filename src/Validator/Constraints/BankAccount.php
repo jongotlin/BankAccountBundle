@@ -12,5 +12,10 @@ class BankAccount extends Constraint
     /**
      * @var string
      */
-    public $message = 'This value is not a valid bank account.';
+    public $bankAccountMessage = 'This value is not a valid bank account.';
+
+    /**
+     * @var string
+     */
+    public $clearingNumberMessage = 'Invalid clearing number.';
 }

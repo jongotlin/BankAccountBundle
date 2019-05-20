@@ -6,6 +6,10 @@
                 <source>This value is not a valid bank account.</source>
                 <target>Värdet är inte ett giltigt bankkonto.</target>
             </trans-unit>
+            <trans-unit id="2">
+                <source>Invalid clearing number.</source>
+                <target>Felaktigt clearingnummer.</target>
+            </trans-unit>
         </body>
     </file>
 </xliff>

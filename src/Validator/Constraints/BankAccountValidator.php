@@ -4,6 +4,7 @@ namespace JGI\BankAccountBundle\Validator\Constraints;
 
 use byrokrat\banking\AccountFactoryInterface;
 use byrokrat\banking\Exception\InvalidAccountNumberException;
+use byrokrat\banking\Exception\InvalidClearingNumberException;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
@@ -36,8 +37,10 @@ class BankAccountValidator extends ConstraintValidator
 
         try {
             $this->accountFactory->createAccount($value);
+        } catch (InvalidClearingNumberException $e) {
+            $this->context->addViolation($constraint->clearingNumberMessage);
         } catch (InvalidAccountNumberException $e) {
-            $this->context->addViolation($constraint->message);
+            $this->context->addViolation($constraint->bankAccountMessage);
         }
     }
 }
