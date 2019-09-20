@@ -1,6 +1,9 @@
 services:
+  byrokrat\banking\AccountFactory:
+    class: byrokrat\banking\AccountFactory
+
   byrokrat\banking\AccountFactoryInterface:
-    class: byrokrat\banking\AccountFactoryInterface
+    alias: byrokrat\banking\AccountFactory
 
   JGI\BankAccountBundle\Validator\Constraints\BankAccountValidator:
     class: JGI\BankAccountBundle\Validator\Constraints\BankAccountValidator
