@@ -18,7 +18,7 @@
   },
   "require": {
     "php": "^7.0",
-    "symfony/framework-bundle": "^2.7 || ^3.0",
+    "symfony/framework-bundle": "^2.7|^3.0|^4.0",
     "byrokrat/banking": "^2.2"
   },
   "require-dev": {
